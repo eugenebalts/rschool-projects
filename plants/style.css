@@ -3,9 +3,11 @@ body {
     flex-direction: column;
     justify-content: space-between;
     min-height: 100vh;
+    width: 1440px;
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
     font-size: 16px;
+    font-family: 'Inika';
 }
 
 header {
@@ -26,7 +28,7 @@ footer {
 
 /* HEADER */
 
-.header-navbar {
+.header-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -34,7 +36,7 @@ footer {
 }
 
 .header-logo {
-    align-self: ;
+    
 }
 
 .header-navigation {
@@ -44,7 +46,6 @@ footer {
 
 .header-navigation-list {
     margin-right: 46px;
-    font-family: 'Inika';
 }
 
 .header-navigation-list a {
@@ -60,4 +61,70 @@ footer {
 
 
 /* MAIN */
+
+main {
+    background: #EDF2EC;
+}
+
+    /* WELCOME SECTION */
+
+    .welcome {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .welcome-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 550px;
+        color: #717171;
+    
+
+    }
+
+    .section-title {
+        line-height: 50px;
+        font-size: 45px;
+    font-weight: 700;
+        font-family: 'Inter';
+        font-style: normal;
+    
+    }
+
+    .section-title span {
+        color: #499A18;
+    }
+
+    .welcome-description {
+        line-height: 35px;
+        font-size: 20px;
+        color: #636060;
+    }
+
+    .welcome-button {
+        padding: 14px 27px;
+        font-size: 16px;
+        text-transform: uppercase;
+        border: 2px solid #E06733;
+        border-radius: 10px;
+        transition: color 0.2s linear;
+    }
+
+    .welcome-button:hover{
+        background-color: #E06733;
+        color: white;
+    }
+
+
+    /* ABOUT US SECTION */
+
+    
+
+
+
+
+
 
