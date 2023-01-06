@@ -2,7 +2,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 100vh;
     width: 1440px;
     padding: 0;
     margin: 0 auto;
@@ -51,7 +50,7 @@ footer {
 .header-navigation-list a {
     text-decoration: none;
     color: #010201;
-    transform: 0.2s color linear;
+    transition: 0.2s color linear;
 }
 
 .header-navigation-list a:hover {
@@ -66,42 +65,44 @@ main {
     background: #EDF2EC;
 }
 
+.section-title {
+    line-height: 50px;
+    font-family: 'Inter';
+    font-style: normal;
+
+}
+
+.section-title span {
+    color: #499A18;
+}
+
+.section-description {
+    line-height: 35px;
+    font-size: 20px;
+    color: #636060;
+}
+
     /* WELCOME SECTION */
+
+
 
     .welcome {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 62px 0;
     }
 
     .welcome-info {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        flex-wrap: wrap;
         width: 550px;
         color: #717171;
-    
-
     }
-
-    .section-title {
-        line-height: 50px;
+    
+    .welcome-info .section-title {
         font-size: 45px;
-    font-weight: 700;
-        font-family: 'Inter';
-        font-style: normal;
-    
-    }
-
-    .section-title span {
-        color: #499A18;
-    }
-
-    .welcome-description {
-        line-height: 35px;
-        font-size: 20px;
-        color: #636060;
     }
 
     .welcome-button {
@@ -109,6 +110,7 @@ main {
         font-size: 16px;
         text-transform: uppercase;
         border: 2px solid #E06733;
+        background: #EDF2EC;
         border-radius: 10px;
         transition: color 0.2s linear;
     }
@@ -121,7 +123,73 @@ main {
 
     /* ABOUT US SECTION */
 
+
+    .about-us {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 94px 0px;
+    }
     
+    .about-us .section-title {
+        font-size: 40px;
+        font-weight: 400;
+        color: #E06733;
+    }
+
+    .about-us-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 605px;
+    }
+
+
+
+
+
+
+/* FOOTER */
+
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.author {
+    display: flex;
+}
+
+.author p {
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+.footer-github-link {
+    text-decoration: none;
+    color: black;
+}
+
+.rsschool a {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.footer-navigation {
+    display: inline-block;
+    list-style: none;
+    letter-spacing: 30px;
+}
+
+.footer-navigation-list {
+}
+
+
+
+
 
 
 
