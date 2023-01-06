@@ -308,6 +308,36 @@ main {
     }
 
     
+    /* CONTACTS */
+
+    .contacts {
+        display: flex;
+        justify-content: space-between;
+        padding: 55px 0 0;
+    }
+
+    .contacts .section-title { 
+        font-size: 40px;
+    }
+
+    .contacts-selection {
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: fit-content;
+        width: 450px;
+        padding: px 20px;
+        color: #717171;
+        background: #D6E7D2;
+    }
+
+    .contacts-selection-option {
+        display: inline;
+    }
+
+
+
     
     
     
@@ -336,9 +366,18 @@ main {
     display: flex;
 }
 
-.author p {
+.author ul {
+    display: flex;
+}
+
+.author li {
     margin-right: 20px;
     font-size: 20px;
+    list-style: none;
+}
+
+.author li:last-child {
+    margin: 0;
 }
 
 .footer-github-link {
@@ -347,6 +386,7 @@ main {
 }
 
 .rsschool a {
+    text-align: center;
     font-size: 20px;
     text-decoration: none;
     color: black;
