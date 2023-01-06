@@ -1,3 +1,4 @@
+
 body {
     display: flex;
     flex-direction: column;
@@ -6,7 +7,7 @@ body {
     padding: 0;
     margin: 0 auto;
     font-size: 16px;
-    font-family: 'Inika';
+    font-family: 'Inter';
 }
 
 header {
@@ -48,9 +49,10 @@ footer {
 }
 
 .header-navigation-list a {
+    font-family: 'Inika';
     text-decoration: none;
     color: #010201;
-    transition: 0.2s all linear;
+    transition: 0.1s all linear;
 }
 
 .header-navigation-list a:hover {
@@ -112,7 +114,7 @@ main {
         border: 2px solid #E06733;
         background: #EDF2EC;
         border-radius: 10px;
-        transition: all 0.2s linear;
+        transition: all 0.1s linear;
     }
 
     .welcome-button:hover{
@@ -132,6 +134,7 @@ main {
     }
     
     .about-us .section-title {
+        font-family: 'Inika';
         font-size: 40px;
         font-weight: 400;
         color: #E06733;
@@ -158,6 +161,7 @@ main {
 
     .service-selection .section-title{
         margin-right: 142px;
+        font-family: 'Inika';
         font-weight: 400;
         font-size: 40px;
         color:#499A18;
@@ -175,7 +179,7 @@ main {
         border-radius: 5px;
         background: none;
         color: #E06733;
-        transition: 0.2s all linear;
+        transition: 0.1s all linear;
     }
 
     .service-button:hover {
@@ -198,7 +202,7 @@ main {
         text-align: center;
         border: 1px solid #E3E1D5;
         border-radius: 20px;
-        transition: 0.2s linear;
+        transition: 0.1s linear;
 
     }
 
@@ -222,8 +226,97 @@ main {
         transform: scale(1.05);
         cursor: pointer;
     }
+
+
+    /* Prices */
+
+    .prices {
+        display: flex;
+        justify-content: space-between;
+        padding: 40px 0 115px;
+
+    }
+
+    .prices-menu {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .prices .section-title {
+        margin: 0;
+        font-size: 40px;
+    }
+
+    .prices-selection {
+        margin-top: 60px;
+        padding: 35px 40px;
+        list-style: none;
+        background: white;;
+        border: 1px solid #E3E1D5;
+        border-radius: 20px;
+    }
+
+    .prices-selection-list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-width: 250px;
+        margin-bottom: 32px;
+        padding: 16px 40px;
+        font-family: 'Inter';
+        font-size: 20px;
+        font-weight: 700;
+        background: #EDF2EC; /* УДАЛИТЬ ПОСЛЕ ДОБАВЛЕНИЯ ФОНОВ */
+        border-radius: 20px;
+        transition: all 0.1s linear;
+    }
+
+    .prices-selection-list:last-child {
+        margin: 0;
+    }
+
+    .prices-selection-list:hover {
+        background-color: #E06733;
+        color:white;
+        cursor: pointer;
+    }
+
+    .prices-call-us {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        text-align: right;
+
+    }
+
+    .call-us-button {
+        margin: 40px 0;
+        padding: 12px 30px;
+        font-family: 'Inika ';
+        font-size: 20px;
+        font-weight: 700;
+        color: #E06733;
+        border: 1px solid #E06733;
+        border-radius: 5px;
+        transition: all 0.1s linear;
+    }
+
+    .call-us-button:hover{
+        background: #E06733;
+        color: white;
+        cursor: pointer;
+    }
+
     
     
+    
+    
+
+
+
+
+
+
 
 
 
