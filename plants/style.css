@@ -50,7 +50,7 @@ footer {
 .header-navigation-list a {
     text-decoration: none;
     color: #010201;
-    transition: 0.2s color linear;
+    transition: 0.2s all linear;
 }
 
 .header-navigation-list a:hover {
@@ -112,7 +112,7 @@ main {
         border: 2px solid #E06733;
         background: #EDF2EC;
         border-radius: 10px;
-        transition: color 0.2s linear;
+        transition: all 0.2s linear;
     }
 
     .welcome-button:hover{
@@ -175,6 +175,12 @@ main {
         border-radius: 5px;
         background: none;
         color: #E06733;
+        transition: 0.2s all linear;
+    }
+
+    .service-button:hover {
+        background-color: #E06733;
+        color: white;
     }
 
     .services-list {
@@ -187,8 +193,8 @@ main {
 
     .service-item {
         margin-bottom: 55px;
-        height: 450px;
-        width: 330px;
+        min-height: 450px;
+        max-width: 330px;
         text-align: center;
         border: 1px solid #E3E1D5;
         border-radius: 20px;
@@ -197,12 +203,18 @@ main {
     }
 
     .service-title {
+        margin: 10px 0;
+        padding: 0;
+        line-height: 20px;
         font-size: 20px;
         font-weight: 700;
         color: #E06733;
     }
-    
+
     .service-description {
+        margin: 0;
+        padding: 0;
+        word-break: break-all; 
         color:#717171;
     }
 
