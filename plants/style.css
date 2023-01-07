@@ -1,4 +1,13 @@
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -14,10 +23,8 @@ header {
     background: #EDF2EC;
 }
 
-main {
-}
-
-footer {
+.section-change-color {
+    background: white;
 }
 
 .container {
@@ -32,11 +39,8 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 42px 0;
-}
-
-.header-logo {
-    
+    padding: 55px 0;
+    margin: 0;
 }
 
 .header-navigation {
@@ -47,6 +51,11 @@ footer {
 .header-navigation-list {
     margin-right: 46px;
 }
+
+.header-navigation-list:last-child {
+    margin-right: 0;
+}
+
 
 .header-navigation-list a {
     font-family: 'Inika';
@@ -71,7 +80,6 @@ main {
     line-height: 50px;
     font-family: 'Inter';
     font-style: normal;
-
 }
 
 .section-title span {
@@ -104,15 +112,21 @@ main {
     }
     
     .welcome-info .section-title {
+        margin: 0;
+        padding: 0;
         font-size: 45px;
+    }
+
+    .welcome .section-description {
+        margin: 45px 0;
     }
 
     .welcome-button {
         padding: 14px 27px;
         font-size: 16px;
         text-transform: uppercase;
-        border: 2px solid #E06733;
         background: #EDF2EC;
+        border: 2px solid #E06733;
         border-radius: 10px;
         transition: all 0.1s linear;
     }
@@ -120,6 +134,7 @@ main {
     .welcome-button:hover{
         background-color: #E06733;
         color: white;
+        cursor: pointer;
     }
 
 
@@ -143,15 +158,20 @@ main {
     .about-us-info {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: space-around;
         width: 605px;
+    }
+
+    .about-us .section-description {
+        margin-top: 40px;
+        line-height: 30px;
     }
 
 
     /* SERVICE */
 
     .service {
-        padding: 40px 0 120px;
+        padding: 40px 0 130px;
     }
 
     .service-selection {
@@ -160,20 +180,19 @@ main {
     }
 
     .service-selection .section-title{
-        margin-right: 142px;
+        margin: 0 152px 0 0;
+        line-height: 52.12px;
         font-family: 'Inika';
         font-weight: 400;
         font-size: 40px;
         color:#499A18;
     }
 
-    .service-buttons {
-        
-    }
-
     .service-button {
         padding: 12px 40px;
         margin-right: 38px;
+        min-width: 160px;
+        text-align: center;
         font-size: 20px;
         border: 1px solid #E06733;
         border-radius: 5px;
@@ -185,25 +204,26 @@ main {
     .service-button:hover {
         background-color: #E06733;
         color: white;
+        cursor: pointer;
     }
 
     .services-list {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        padding-top: 90px;
+        padding-top: 85px;
+        margin-top: -55px;
         
     }
 
     .service-item {
-        margin-bottom: 55px;
+        margin-top: 55px;
         min-height: 450px;
         max-width: 330px;
         text-align: center;
         border: 1px solid #E3E1D5;
         border-radius: 20px;
         transition: 0.1s linear;
-
     }
 
     .service-title {
@@ -234,7 +254,6 @@ main {
         display: flex;
         justify-content: space-between;
         padding: 40px 0 115px;
-
     }
 
     .prices-menu {
@@ -249,7 +268,7 @@ main {
 
     .prices-selection {
         margin-top: 60px;
-        padding: 35px 40px;
+        padding: 34px 41px;
         list-style: none;
         background: white;;
         border: 1px solid #E3E1D5;
@@ -260,13 +279,15 @@ main {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        box-sizing: border-box;
         min-width: 250px;
+        max-height: 50px;
         margin-bottom: 32px;
         padding: 16px 40px;
         font-family: 'Inter';
         font-size: 20px;
         font-weight: 700;
-        background: #EDF2EC; /* УДАЛИТЬ ПОСЛЕ ДОБАВЛЕНИЯ ФОНОВ */
+        background: #EDF2EC;
         border-radius: 20px;
         transition: all 0.1s linear;
     }
@@ -286,16 +307,24 @@ main {
         flex-direction: column;
         align-items: flex-end;
         text-align: right;
+    }
 
+    .prices-call-us img {
+        position: relative;
+        right: -10px;
+        float: right;
     }
 
     .call-us-button {
+        box-sizing: border-box;
+        min-height: 50px;
         margin: 40px 0;
-        padding: 12px 30px;
-        font-family: 'Inika ';
+        padding: 12px 32px;
+        font-family: 'Inika';
         font-size: 20px;
         font-weight: 700;
         color: #E06733;
+        background: white;
         border: 1px solid #E06733;
         border-radius: 5px;
         transition: all 0.1s linear;
@@ -313,43 +342,55 @@ main {
     .contacts {
         display: flex;
         justify-content: space-between;
+        align-items: flex-start;
         padding: 55px 0 0;
     }
 
-    .contacts .section-title { 
+    .contacts .section-title {
+        align-self: flex-start;
+        position: absolute;
+        left: calc(+50% - 250px);
+        width: 500px;
+        margin: 5px 0 0;    
+        text-align: center;
+        font-family: 'Inika';
         font-size: 40px;
+        color: #499A18;
+    }
+
+    .contact-woman {
+        max-width: fit-content;
+        max-height: fit-content;
     }
 
     .contacts-selection {
-        
+        position: relative;
+        top: 95px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        height: fit-content;
+        padding: 15px 20px;
+        box-sizing: border-box;
+        height: 50px;
         width: 450px;
-        padding: px 20px;
         color: #717171;
         background: #D6E7D2;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 0px;
+        cursor: pointer;
+
     }
 
     .contacts-selection-option {
         display: inline;
+        font-size: 20px;
     }
 
-
-
-    
-    
-    
-
-
-
-
-
-
-
-
-
+    .contacts-arrow {
+        position: relative; /* Не получилось сделать ровно без позиционирования */
+        top: 3px;
+        padding-right: 15px;
+    }
 
 
 
@@ -359,7 +400,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px 0;
+    padding: 50px 0;
 }
 
 .author {
@@ -385,6 +426,16 @@ main {
     color: black;
 }
 
+.rolling-scopes {
+    position: absolute;
+    /* Только так получилось выровнять,
+    Если есть идеи, как это можно сделать более правильно,
+    подскажите пожалуйста */
+    left: calc(50% - 250px);
+    width: 500px;
+    text-align: center;
+}
+
 .rsschool a {
     text-align: center;
     font-size: 20px;
@@ -393,15 +444,12 @@ main {
 }
 
 .footer-navigation {
+    margin: 0px;
+    padding: 0px;
     display: inline-block;
     list-style: none;
-    letter-spacing: 30px;
+    letter-spacing: 15px;
 }
-
-.footer-navigation-list {
-    
-}
-
 
 
 
