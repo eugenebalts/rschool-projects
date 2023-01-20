@@ -46,16 +46,8 @@ header {
 .header-navigation {
     display: flex;
     list-style: none;
+    gap: 46px;
 }
-
-.header-navigation-list {
-    margin-right: 46px;
-}
-
-.header-navigation-list:last-child {
-    margin-right: 0;
-}
-
 
 .header-navigation-list a {
     font-family: 'Inika';
@@ -167,6 +159,12 @@ main {
         line-height: 30px;
     }
 
+    .about-us-picture {
+        background-image: url(assets/houseplant.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
 
     /* SERVICE */
 
@@ -194,6 +192,7 @@ main {
         min-width: 160px;
         text-align: center;
         font-size: 20px;
+        font-family: 'Inika';
         border: 1px solid #E06733;
         border-radius: 5px;
         background: none;
@@ -359,8 +358,11 @@ main {
     }
 
     .contact-woman {
-        max-width: fit-content;
-        max-height: fit-content;
+        background-image: url(assets/contact_woman.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 400px;
+        height: 497px;
     }
 
     .contacts-selection {
@@ -451,6 +453,238 @@ main {
     letter-spacing: 15px;
 }
 
+
+
+
+/* ---------------------------------- @@@ MEDIA ----------------------------  */ 
+
+@media (max-width: 768px) {
+    
+    /* GENERAL */
+
+    body {
+    }
+
+    .container {
+        width: 668px;
+    }
+
+    /* HEADER */
+
+    .header-wrapper {
+        padding: 47px 0;
+    }
+
+    .header-logo {
+        position: relative;
+        top: -3px;
+    }
+
+    /* MAIN */
+
+
+    .section-description {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    /* WELCOME SECTION */
+
+    .welcome {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 40px 0px 70px;
+    }
+
+    .welcome-picture {
+        height: 254.15px;
+        width: 280px;
+        background-image: url(assets/leafs.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .welcome-info {
+        max-width: 340px;
+    }
+
+    .welcome .section-title {
+        font-size: 35px;
+    }
+
+    .welcome .section-description {
+        margin: 30px 0px;
+    }
+
+    /* ABOUT US SECTION */
+
+    .about-us {
+        flex-direction: column;
+        align-items: space-between;
+        text-align: center;
+        padding: 40px 0 95px;
+    }
+
+    .about-us .section-title {
+        font-size: 35px;
+        line-height: 45px;
+        padding-bottom: 11px; 
+    }
+
+    .about-us .section-description {
+        font-size: 20px;
+        text-align: left;
+        margin-bottom: 40px;
+    }
+
+    .about-us-info {
+        width: fit-content;
+    }
+
+    .about-us-picture {
+        width: 250px;
+        height: 258px;
+        margin-top: 30px;
+        padding-top: 40px;
+        background-image: url(assets/houseplant.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        
+    }
+
+    /* SERVICE */
+
+    .service {
+        padding: 60px 0;
+    }
+
+    .service-selection {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 40px;
+
+    }
+
+    .service-selection .section-title {
+        width: 306px;
+        line-height: 45.61px;
+        font-size: 35px;
+        float: inline-start;
+        padding-bottom: 3px;
+    }
+
+    .service-button {
+        padding: 12px 40px;
+        font-size: 20px;
+    }
+
+    .services-list {
+        padding-top: 40px;
+        margin-top: 0;
+    }
+
+    .service-item {
+        margin: 0;
+        max-width: 281px;
+    }
+
+    .service.picture {
+        width: 281px;
+        height: 450px;
+    }
+
+
+    /* PRICES */ 
+
+    .prices {
+        padding: 40px 0 88px;
+    }
+
+    .prices .section-title {
+        padding: 0px 14px;
+        font-size: 35px;
+    }
+
+        .prices-selection {
+        margin-top: 50px;
+    }
+
+    .prices-call-us {
+        padding-top: 100px;
+    }
+
+    .prices-call-us .section-title {
+        margin: 0;
+        padding: 0;
+        font-size: 25px;
+        line-height: 35px;
+    }
+
+    .call-us-button {
+        margin: 30px 0;
+    }
+
+
+    /* CONTACTS */
+
+    .contacts {
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 0 0;
+        text-align: center;
+        
+    }
+
+    .contacts .section-title {
+        align-self: center;
+        position: static;
+        width: fit-content;
+        text-align: center;
+
+    }
+
+
+    .contact-woman {
+        order: 3;
+        margin: 250px 0 0 19px;
+        height: 248.5px;
+        width: 200px;
+        text-align: center;
+
+    }
+
+    .contacts-selection {
+        order: 2;
+        margin-top: 100px;
+        position: static;
+    }
+
+
+    /* FOOTER */
+
+    .footer-wrapper {
+        flex-direction: column;
+        padding: 30px 0;
+        justify-content: center;
+        align-items: space-between ;
+        gap: 16px;
+    }
+
+    .rolling-scopes {
+        position: static;
+        margin-bottom: 10px;
+    }
+
+    
+
+
+
+
+
+
+}
 
 
 
