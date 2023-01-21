@@ -95,6 +95,14 @@ main {
         padding: 62px 0;
     }
 
+    .welcome-picture {
+        height: 407.36px;
+        width: 448.8px;
+        background-image: url(assets/leafs.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
     .welcome-info {
         display: flex;
         flex-direction: column;
@@ -160,6 +168,8 @@ main {
     }
 
     .about-us-picture {
+        width: 464px;
+        height: 479px;
         background-image: url(assets/houseplant.png);
         background-size: contain;
         background-repeat: no-repeat;
@@ -223,6 +233,11 @@ main {
         border: 1px solid #E3E1D5;
         border-radius: 20px;
         transition: all 0.2s linear;
+    }
+
+
+    .service-picture-tablet {
+        display: none;
     }
 
     .service-title {
@@ -462,8 +477,6 @@ main {
     
     /* GENERAL */
 
-    body {
-    }
 
     .container {
         width: 668px;
@@ -500,9 +513,6 @@ main {
     .welcome-picture {
         height: 254.15px;
         width: 280px;
-        background-image: url(assets/leafs.png);
-        background-size: contain;
-        background-repeat: no-repeat;
     }
 
     .welcome-info {
@@ -547,16 +557,13 @@ main {
         height: 258px;
         margin-top: 30px;
         padding-top: 40px;
-        background-image: url(assets/houseplant.png);
-        background-size: contain;
-        background-repeat: no-repeat;
         
     }
 
     /* SERVICE */
 
     .service {
-        padding: 60px 0;
+        padding: 60px 0 70px;
     }
 
     .service-selection {
@@ -582,24 +589,31 @@ main {
 
     .services-list {
         padding-top: 40px;
-        margin-top: 0;
+        margin-top: -38px;
     }
 
     .service-item {
-        margin: 0;
+        margin: 38px 0 0;
         max-width: 281px;
     }
 
-    .service.picture {
-        width: 281px;
-        height: 450px;
+    .service-picture {
+        display: none;
+    }
+
+    .service-picture-tablet {
+        display: block;
+    }
+
+    .service-description {
+        padding: 0 40px;
     }
 
 
     /* PRICES */ 
 
     .prices {
-        padding: 40px 0 88px;
+        padding: 40px 0 75px;
     }
 
     .prices .section-title {
@@ -676,14 +690,6 @@ main {
         position: static;
         margin-bottom: 10px;
     }
-
-    
-
-
-
-
-
-
 }
 
 
