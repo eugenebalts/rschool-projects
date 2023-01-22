@@ -61,6 +61,59 @@ header {
     color: #E06733;
 }
 
+.header-burger-button {
+    display: none;
+    position: relative;
+    top: -5px;
+    width: 40px;
+    height: 24px;
+    border: none;
+}
+
+.header-burger-button span {
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    left: 0;
+    background-color: #717171;
+    transition: transform 0.3s, opacity 0.3s, background-color .1s;
+}
+
+.header-burger-button span:active {
+    background-color: #E06733;
+}
+
+.header-burger-button span:nth-child(1) {
+    bottom: 24px;
+}
+
+.header-burger-button span:nth-child(2) {
+    bottom: 16px;
+}
+
+.header-burger-button span:nth-child(3) {
+    bottom: 8px;
+}
+
+.header-burger-button span:nth-child(4) {
+    bottom: 0px;
+}
+
+.header.open .header-burger-button span:nth-child(1) {
+    transform: translateY(12px) rotate(225deg);
+}
+.header.open .header-burger-button span:nth-child(2) {
+    transform: translateY(30px);
+    opacity: 0;
+}
+.header.open .header-burger-button span:nth-child(3) {
+    opacity: 0;
+    transform: translateY(-30px)
+}
+.header.open .header-burger-button span:nth-child(4) {
+    transform: translateY(-12px) rotate(-225deg);
+}
+
 
 /* MAIN */
 
@@ -107,7 +160,7 @@ main {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        width: 550px;
+        max-width: 550px;
         color: #717171;
     }
     
@@ -400,7 +453,8 @@ main {
 
     .contacts-selection-option {
         display: inline;
-        font-size: 20px;
+        font-size: 21px;
+        line-height: 40px;
     }
 
     .contacts-arrow {
@@ -471,7 +525,7 @@ main {
 
 
 
-/* ---------------------------------- @@@ MEDIA ----------------------------  */ 
+/* ---------------------------------- @@@ MEDIA -----------------------------------------  */ 
 
 @media (max-width: 768px) {
     
@@ -491,6 +545,10 @@ main {
     .header-logo {
         position: relative;
         top: -3px;
+    }
+
+    .header-burger-button {
+        display: none;
     }
 
     /* MAIN */
@@ -575,7 +633,7 @@ main {
     }
 
     .service-selection .section-title {
-        width: 306px;
+        max-width: 306px;
         line-height: 45.61px;
         font-size: 35px;
         float: inline-start;
@@ -621,7 +679,7 @@ main {
         font-size: 35px;
     }
 
-        .prices-selection {
+    .prices-selection {
         margin-top: 50px;
     }
 
@@ -690,7 +748,259 @@ main {
         position: static;
         margin-bottom: 10px;
     }
+
 }
+
+
+@media (max-width: 380px) {
+
+    /* GENERAL */
+
+    .container {
+        box-sizing: border-box;
+        width: 330px;
+
+    }
+
+    /* HEADER */
+
+    .header-wrapper {
+        padding: 36px 0 30px;
+    }
+
+    .header-navigation {
+        display: block;
+        position: absolute;
+        padding: 80px 0 0;
+        width: 100%;
+        height: 100vh;
+        left: -100%;
+        top: 0;
+        font-size: 25px;
+        text-align: center;
+        background-color: #EDF2EC;
+        transition: transform .3s;
+    }
+
+    .header-navigation-list {
+        padding: 20px 0;
+    }
+
+    .header-navigation-list a {
+        display: block;
+        width: 100%;
+    }
+
+    .header.open .header-navigation {
+        
+        transform: translateX(100%);
+    }
+
+
+
+    .header-burger-button {
+        display: block;
+    }
+
+
+    /* MAIN */
+
+
+    /* WELCOME */
+
+    .welcome {
+        padding: 24px 0;
+    }
+
+    .welcome .section-title {
+        line-height: 35px;
+        font-size: 25px;
+        margin: 2px 0;
+    }
+
+    .welcome .section-description {
+        margin: 20.08px 0;
+    }
+
+    .welcome-button {
+        padding: 9px 16px;
+        margin-top: 3px;
+        font-size: 10px;
+        font-family: 'Inter';
+        text-align: center;
+    }
+
+    .welcome-picture {
+        display: none;
+    }
+    
+
+    /* ABOUT US */
+
+    .about-us {
+        padding: 30px 0 31px;
+    }
+
+    .about-us .section-title {
+        padding: 0;
+        font-size: 25px;
+        line-height: 32.57px;
+    }
+
+    .about-us .section-description {
+        margin: 16px 0 0;
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    .about-us-picture {
+        position: relative;
+        left: 5px;
+        margin: 0;
+        padding: 0;
+        max-width: 158px;
+        max-height: 155px;
+        text-align: center;
+    }
+
+
+    /* SERVICE */
+
+    .service {
+        padding: 30px 0 27px;
+    }
+
+    .service-selection {
+        gap: 35px;
+    }
+
+    .service-selection .section-title {
+        margin: 0;
+        font-size: 25px;
+        line-height: 32.57px;
+    }
+
+    .service-button {
+        padding: 7px 28px;
+        margin: 0 6px 9px 0;
+        min-width: 121px;
+        font-size: 15px;
+        line-height: 19.54px;
+    }
+
+    .services-list {
+        justify-content: center;
+        margin-top: -44px;
+    }
+
+    .service-item {
+        margin: 33px 0 0;
+    }
+
+    
+    /* PRICES */ 
+
+    .prices {
+        flex-direction: column;
+        align-items: center;
+        padding: 25px 0 40px;
+        text-align: center;
+        gap: 16px;
+    }
+
+    .prices-menu {
+        gap: 36px;
+    }
+
+    .prices-selection {
+        margin: 0;
+        padding: 29px 22px;
+    }
+
+    .prices-selection-list {
+        min-width: 180px;
+        margin-bottom: 13.92px;
+        padding: 15.91px 30px;
+        font-size: 15px;
+    }
+
+    .prices-selection-list img {
+        margin-right: 10px;
+    }
+
+    .prices .section-title {
+        font-size: 25px;
+        line-height: 30.26px;
+    }
+
+    .prices-call-us {
+        align-items: center;
+        padding: 0;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .prices-call-us .section-title {
+        font-size: 20px;
+        line-height: 35px;
+    }
+
+    .call-us-button {
+        min-height: auto;
+        margin: 0;
+        padding: 7px 24px;
+        font-size: 15px;
+        line-height: 19.54px;
+    }
+
+    .prices-call-us img {
+        display: none;
+    }
+
+    
+    /* CONTACTS */
+
+    .contacts {
+        margin: 0;
+        padding: 25px 0 0;
+    }
+
+    .contacts .section-title {
+        margin: 0;
+        font-size: 25px;
+        line-height: 32.57px;
+    }
+
+    .contacts-selection {
+        max-width: 300px;
+        margin: 82px 0 132px;
+    }
+
+    .contacts-arrow {
+        margin: 0;
+        padding: 0;
+    }
+
+    .contact-woman {
+        max-width: 100px;
+        max-height: 124.25px;
+        margin: 0;
+    }
+
+
+    /* FOOTER */
+
+    .footer-wrapper {
+        padding: 21px 0 13px;
+        gap: 14.5px;
+    }
+
+    .rolling-scopes {
+        margin: 0;
+    }
+    
+}
+
 
 
 
