@@ -758,15 +758,6 @@ main {
 
 /* -----------------------------------MEDIA 380 px---------------------------------*/
 
-@media (min-width: 381px) {
-    body {
-        max-width: 668px;
-    }
-    .container {
-        max-width: 668px;
-    }
-}
-
 
 @media (max-width: 380px) {
 
