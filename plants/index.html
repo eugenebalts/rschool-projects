@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="script.js"></script>
+    <script defer src="script.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,11 +15,11 @@
     <title>Plants</title>
     <link  rel="icon" type="image/x-icon" href="favicon.png">
 </head>
-<body>
+<body id="body" class="body">
 
     <!-- HEADER-->
 
-    <header>
+    <header class="header">
         <div class="container">
             <div class="header-wrapper">
                 <div class="header-logo">
@@ -27,13 +27,16 @@
                 </div>
                 <nav>
                     <ul class="header-navigation">
-                        <li class="header-navigation-list"><a href="#home"> Home </a></li>
-                        <li class="header-navigation-list"><a href="#about-us"> About us </a></li>
-                        <li class="header-navigation-list"><a href="#service"> Service </a></li>
-                        <li class="header-navigation-list"><a href="#prices"> Price </a></li>
-                        <li class="header-navigation-list"><a href="#contacts"> Contacts </a></li>
+                        <li class="header-navigation-list" id="header-nav-link-1"><a href="#home"> Home </a></li>
+                        <li class="header-navigation-list" id="header-nav-link-2"><a href="#about-us"> About us </a></li>
+                        <li class="header-navigation-list" id="header-nav-link-3"><a href="#service"> Service </a></li>
+                        <li class="header-navigation-list" id="header-nav-link-4"><a href="#prices"> Price </a></li>
+                        <li class="header-navigation-list" id="header-nav-link-5"><a href="#contacts"> Contacts </a></li>
                     </ul>
                 </nav>
+                <button class="header-burger-button" id="header-burger">
+                    <span></span><span></span><span></span><span></span>
+                </button>
             </div>
         </div>
     </header>
@@ -44,7 +47,7 @@
             <div class="container">
                 <section class="welcome" id="home">
                     <div class="welcome-picture">
-                        <img src="assets/leafs.png" alt="leafs">
+                    
                     </div>
                     <div class="welcome-info">
                         <h1 class="section-title">
@@ -58,7 +61,7 @@
                         </form>
                     </div>
                 </section>
-            </div>
+            </div>  
         <div class="section-change-color">
             <div class="container">
                 <section class="about-us" id="about-us">
@@ -75,7 +78,7 @@
                             </p>
                         </div>
                         <div class="about-us-picture">
-                        <img src="assets/houseplant.png" alt="house plant">
+                        
                         </div>
                 </section>
             </div>
@@ -90,35 +93,42 @@
                             <button class="service-button"> Planting </button>
                         </form>
                     </div>
+                    
                     <div class="services-list">
 
                         <article class="service-item">
-                            <img src="assets/first.png" alt="Garden care" class="service-picture">
+                            <img src="assets/first.png" alt="picture" class="service-picture"> 
+                            <img src="assets/first-1.png" alt="picture" class="service-picture-tablet">
                             <h3 class="service-title"> Garden care </h3>
                             <p class="service-description"> Lorem Ipsum has been the industry </p>
                         </article>
                         <article class="service-item">
-                            <img src="assets/second.png" alt="picture" class="service-picture"> 
+                            <img src="assets/second.png" alt="picture" class="service-picture">
+                            <img src="assets/second-1.png" alt="picture" class="service-picture-tablet">
                             <h3 class="service-title"> Planting </h3>
                             <p class="service-description"> Lorem Ipsum has been the industry </p>
                         </article>
                         <article class="service-item">
                             <img src="assets/third.png" alt="picture" class="service-picture">
+                            <img src="assets/third-1.png" alt="picture" class="service-picture-tablet">
                             <h3 class="service-title"> Lawn care </h3>
                             <p class="service-description"> Lorem Ipsum has been the industry </p>
                         </article>
                         <article class="service-item">
                             <img src="assets/fours.png" alt="picture" class="service-picture"> 
+                            <img src="assets/fours-1.png" alt="picture" class="service-picture-tablet">
                             <h3 class="service-title"> Planting </h3>
                             <p class="service-description"> Lorem Ipsum has been the industry </p>
                         </article>
                         <article class="service-item">
-                            <img src="assets/fives.png" alt="picture" class="service-picture"> 
+                            <img src="assets/fives.png" alt="picture" class="service-picture">
+                            <img src="assets/fives-1.png" alt="picture" class="service-picture-tablet">
                             <h3 class="service-title"> Garden care </h3>
                             <p class="service-description"> Lorem Ipsum has been the industry </p>
                         </article>
                         <article class="service-item">
-                            <img src="assets/sixs.png" alt="picture" class="service-picture"> 
+                            <img src="assets/sixs.png" alt="picture" class="service-picture">
+                            <img src="assets/sixs-1.png" alt="picture" class="service-picture-tablet">
                             <h3 class="service-title"> Planting </h3>
                             <p class="service-description"> Lorem Ipsum has been the industry</p>
                         </article>
@@ -150,7 +160,7 @@
 
             <div class="container">
                 <section class="contacts" id="contacts">
-                    <img src="assets/contact_woman.png" alt="woman" class="contact-woman">
+                    <div class="contact-woman"> </div>
                     <h2 class="section-title">Contact us</h2>
                     <div class="contacts-selection" title="Аккордеон не нужен на 0 стейдже"> <!-- Аккордеон не нужен на 0 стейдже, поэтому пока что так-->
                         <div class="contacts-selection-option">
@@ -183,14 +193,13 @@
                         <a href="https://rs.school/js-stage0/">Rolling Scopes School</a>
                     </p>
                 </div>
-                <nav>
-                    <ul class="footer-navigation">
-                        <li class="footer-navigation"><a href="https://www.instagram.com/rsschool_news/"><img src="assets/inst.svg" alt="inst"></a></li>
-                        <li class="footer-navigation"><a href="https://www.facebook.com/groups/TheRollingScopes/"><img src="assets/fb.svg" alt="fb"></a></li>
-                        <li class="footer-navigation"><a href="https://twitter.com/rollingscopes"><img src="assets/twitter.svg" alt="twit"></a></li>
-                        <li class="footer-navigation"><a href="https://pl.pinterest.com/norcobeatz/"><img src="assets/pinterest.svg" alt="pinterest"></a></li>
-                    </ul>
-                </nav>
+                
+                <ul class="footer-navigation">
+                    <li class="footer-navigation"><a href="https://www.instagram.com/rsschool_news/"><img src="assets/inst.svg" alt="inst"></a></li>
+                    <li class="footer-navigation"><a href="https://www.facebook.com/groups/TheRollingScopes/"><img src="assets/fb.svg" alt="fb"></a></li>
+                    <li class="footer-navigation"><a href="https://twitter.com/rollingscopes"><img src="assets/twitter.svg" alt="twit"></a></li>
+                    <li class="footer-navigation"><a href="https://pl.pinterest.com/norcobeatz/"><img src="assets/pinterest.svg" alt="pinterest"></a></li>
+                </ul>
             </div>
         </div>
     </footer>
