@@ -20,5 +20,168 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+// ACCORDION
 
-console.log("Самостоятельная оценка: 100 баллов\n1. Верстка валидная +10\n2. Верстка семантическая +20\n3. Верстка соответствует макету +48\n4. Требования к css +12\n5. Интерактивность +20\n Адпатив Самостоятельная оценка part2: 75 баллов\n1. Соответсвие макету +24 +24\n2. Отсутствие горизонт. прокрутки +15\n3. Адаптивное меню +22");
+const pricesMenu = document.querySelectorAll(".prices-selection-item");
+const pricesHeader = document.querySelectorAll('.prices-selection-list');
+
+
+console.log(pricesMenu)
+
+pricesMenu.forEach(function(elem) {
+    elem.addEventListener('click', function (e) {
+        if (!e.target.classList.contains('panel-button')) {
+            if (elem.classList.contains('show')) {
+                elem.classList.remove('show')
+            } else {
+                pricesMenu.forEach(function(item) {
+                    item.classList.remove('show')
+                })
+                elem.classList.add('show')
+            }
+
+        } 
+    })
+})
+
+// pricesHeader.forEach(item => {
+//     item.addEventListener('click', removeToggle)
+// })
+
+// function removeToggle() {
+//     // this.closest(pricesMenu).classList.remove('show')
+//     console.log('ELEM')
+// }
+
+
+
+// DROP MENU
+
+let selectHeader = document.querySelectorAll('.contacts-selection-header');
+let selectItem = document.querySelectorAll('.contacts-selection-item');
+let cityCard = document.querySelector('.contacts-city-card');
+
+let contactsData = [
+    {
+        city: 'Canandaigua, NY',
+        phone: '+1 585 393 0001', 
+        adress: "151 Charlotte Street"
+    },
+    {
+        city: 'New York City',
+        phone: '+1 212 456 0002', 
+        adress: "9 East 91 Street"
+    },
+    {
+        city: 'Yonkers, NY',
+        phone: '+1 914 678 0003', 
+        adress: "511 Warburton Ave"
+    },
+    {
+        city: 'Sherrill, NY',
+        phone: '+1 315 908 0004', 
+        adress: "14 WEST Noyses BLVD"
+    }
+];
+
+
+
+contactsData.forEach(item => {
+    let div = document.createElement('div');
+    div.innerText = item.city;
+    div.classList.add('contacts-selection-item');
+
+    div.addEventListener('click', (e) => {
+        document.querySelector('.city').innerText = item.city;
+        document.querySelector('.phone').innerText = item.phone;
+        document.querySelector('.office').innerText = item.adress;
+
+        let currentText = e.target.closest('.contacts-selection').querySelector('.contacts-selection-current'),
+        select = e.target.closest('.contacts-selection');
+
+        currentText.innerText = item.city;
+        // Change text with click
+    
+        // closing menu 
+        select.classList.remove('drop-menu');
+        
+        //Change menu color
+        select.style.background = "#C1E698";
+        select.style.boxShadow = "none";
+        select.style.border = "1px 1px 0px 1px solid #D6E7D2";
+    
+        // Open city card menu
+    
+        cityCard.classList.add('open')
+        
+        document.querySelector('.contacts-city-card-button').setAttribute('href', `tel: ${item.phone}`)
+
+    })
+
+    document.querySelector('.contacts-selection-body').append(div)
+})
+
+
+
+
+selectHeader.forEach(item => {
+    item.addEventListener('click', selectToggle)
+});
+
+function selectToggle() {
+    this.parentElement.classList.toggle('drop-menu');
+}
+
+
+// 
+
+alert('Привет, дай мне пожалуйста один день на доработку, буду очень благодарен ♥♥♥')
+
+
+
+
+
+
+
+
+
+
+
+// pricesMenu.forEach(el => {
+//     el.addEventListener('click', (e) => {
+//         const self = e.currentTarget;
+//         self.classList.toggle('show')
+
+//         if (!self.classList.contains('show')) {
+//             console.log('yes')
+            
+//         }
+//     })
+// })
+
+
+
+
+// function hasClass(element, className) {
+//     var rx = new RegExp('(?:^| )' + className + '(?: |$)');
+//     return rx.test(element.className);
+// }
+
+// pricesMenu.addEventListener('click', function)
+
+// pricesMenu.forEach(function(item) => {
+//     if (item)
+// })
+
+
+// const serviceButton = document.getElementById('service-button-gardeners')
+
+// function handleClick (event) {
+//     this.
+//     }
+
+
+// serviceButton.addEventListener('click', handleClick)
+
+
+
