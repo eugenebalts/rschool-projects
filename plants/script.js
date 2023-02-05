@@ -22,7 +22,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // ACCORDION
 
-
 const pricesMenu = document.querySelectorAll(".prices-selection-item");
 const pricesHeader = document.querySelectorAll('.prices-selection-list');
 
@@ -62,56 +61,79 @@ let selectHeader = document.querySelectorAll('.contacts-selection-header');
 let selectItem = document.querySelectorAll('.contacts-selection-item');
 let cityCard = document.querySelector('.contacts-city-card');
 
+let contactsData = [
+    {
+        city: 'Canandaigua, NY',
+        phone: '+1 585 393 0001', 
+        adress: "151 Charlotte Street"
+    },
+    {
+        city: 'New York City',
+        phone: '+1 212 456 0002', 
+        adress: "9 East 91 Street"
+    },
+    {
+        city: 'Yonkers, NY',
+        phone: '+1 914 678 0003', 
+        adress: "511 Warburton Ave"
+    },
+    {
+        city: 'Sherrill, NY',
+        phone: '+1 315 908 0004', 
+        adress: "14 WEST Noyses BLVD"
+    }
+];
+
+
+
+contactsData.forEach(item => {
+    let div = document.createElement('div');
+    div.innerText = item.city;
+    div.classList.add('contacts-selection-item');
+
+    div.addEventListener('click', (e) => {
+        document.querySelector('.city').innerText = item.city;
+        document.querySelector('.phone').innerText = item.phone;
+        document.querySelector('.office').innerText = item.adress;
+
+        let currentText = e.target.closest('.contacts-selection').querySelector('.contacts-selection-current'),
+        select = e.target.closest('.contacts-selection');
+
+        currentText.innerText = item.city;
+        // Change text with click
+    
+        // closing menu 
+        select.classList.remove('drop-menu');
+        
+        //Change menu color
+        select.style.background = "#C1E698";
+        select.style.boxShadow = "none";
+        select.style.border = "1px 1px 0px 1px solid #D6E7D2";
+    
+        // Open city card menu
+    
+        cityCard.classList.add('open')
+        
+        document.querySelector('.contacts-city-card-button').setAttribute('href', `tel: ${item.phone}`)
+
+    })
+
+    document.querySelector('.contacts-selection-body').append(div)
+})
+
+
+
 
 selectHeader.forEach(item => {
     item.addEventListener('click', selectToggle)
-});
-
-selectItem.forEach(item => {
-    item.addEventListener('click', selectChoose)
 });
 
 function selectToggle() {
     this.parentElement.classList.toggle('drop-menu');
 }
 
-function selectChoose() {
-    let text = this.innerText,
-    currentText = this.closest('.contacts-selection').querySelector('.contacts-selection-current'),
-    select = this.closest('.contacts-selection');
 
-    // Change text with click
-    currentText.innerText = text;
-    if (currentText.innerText = 'Canandaigua, NY') {
-        document.querySelector('.city').innerText = text;
-        document.querySelector('.phone').innerText = '+1 585 393 0001';
-        document.querySelector('.office').innerText = '151 Charlotte Street';
-    } if (currentText.innerText = 'New York City') {
-        document.querySelector('.city').innerText = text;
-        document.querySelector('.phone').innerText = '+1 880 055 5353';
-        document.querySelector('.office').innerText = '19 Oxford street';
-    } if (currentText.innerText = 'Yonkers, NY') {
-        document.querySelector('.city').innerText = text;
-        document.querySelector('.phone').innerText = '+1 999 278 1933';
-        document.querySelector('.office').innerText = "178  St.Eugene's Street";
-    } if (currentText.innerText = 'Sherrill, NY') {
-        document.querySelector('.city').innerText = text;
-        document.querySelector('.phone').innerText = '+1 383 298 1344';
-        document.querySelector('.office').innerText = "8 Megan's Fox Street";
-    }
-
-    // closing menu 
-    select.classList.remove('drop-menu');
-    
-    //Change menu color
-    select.style.background = "#C1E698";
-    select.style.boxShadow = "none";
-    select.style.border = "1px 1px 0px 1px solid #D6E7D2";
-
-    // Open city card menu
-
-    cityCard.classList.add('open')
-}
+// 
 
 alert('Привет, дай мне пожалуйста один день на доработку, буду очень благодарен ♥♥♥')
 

@@ -340,7 +340,7 @@ main {
 
     .prices-selection {
         margin-top: 60px;
-        padding: 34px 41px;
+        padding: 34px 41px 9px;
         list-style: none;
         background: white;;
         border: 1px solid #E3E1D5;
@@ -401,25 +401,25 @@ main {
     }
 
     .panel-price {
-        margin: 12px 0;
+        margin: 8px 0;
         font-size: 12px;
     }
 
     .panel-price span {
-        font-size: 20px;
+        font-size: 15.5px;
         font-weight: 700;
         color: #E06733;
     }
 
     .panel-price .bucks {
-        font-size: 16px;
+        font-size: 12px;
     }
 
     .panel-button {
-        box-sizing: border-box;
-        padding: 6px 20px;
+        padding: 6px 23px;
         text-decoration: none;
         font-size: 14px;
+        font-weight: 700;
         background-color: #FFFFFF;
         border-radius: 10px;
         color: #717171;
@@ -641,6 +641,11 @@ main {
 
     .contacts-city-card.open {
         display: block;
+    }
+
+    .contacts-city-card-button {
+        text-decoration: none;
+        color: #717171;
     }
 
 
@@ -906,10 +911,9 @@ main {
 
     }
 
-    .contacts-selection {
+    .contacts-window-selection {
         order: 2;
         margin-top: 100px;
-        position: static;
     }
 
 
