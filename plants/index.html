@@ -88,7 +88,7 @@
                     <div class="service-selection">
                         <h2 class="section-title"> Service and our <br> projects </h2>
                         <form action="#service" class="service-buttons">
-                            <button class="service-button"> Gardens </button>
+                            <button id="service-button-gardeners" class="service-button"> Gardens </button>
                             <button class="service-button"> Lawn </button>
                             <button class="service-button"> Planting </button>
                         </form>
@@ -141,11 +141,34 @@
                 <section class="prices" id="prices">
                     <div class="prices-menu">
                         <h3 class="section-title" >Prices</h3>
-                        <ul class="prices-selection"> <!--Аккордеон на 0 стейдже не нужен, сделал так -->
-                            <li class="prices-selection-list">Basics <span><img src="assets/arrow.svg" alt="arrow"></span></li>
-                            <li class="prices-selection-list">Standard <span><img src="assets/arrow.svg" alt="arrow"></span></li>
-                            <li class="prices-selection-list">Pro care <span><img src="assets/arrow.svg" alt="arrow"></span></li>
-                        </ul>
+                        <div class="prices-selection"> <!--Аккордеон на 0 стейдже не нужен, сделал так -->
+                            <div class="prices-selection-item" >
+                                <div class="prices-selection-list">Basics <span><img src="assets/arrow.svg" alt="arrow"></span></div>
+                                <div class="panel"> 
+                                    <p class="panel-description">Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p>
+                                    <p class="panel-price"> <span class="bucks">$</span><span>15</span>/ per hour</p>
+                                    <a class="panel-button" href="#contacts"> Order</a>
+                                </div>
+                            </div>
+
+                            <div class="prices-selection-item">
+                                <div class="prices-selection-list">Standard <span><img src="assets/arrow.svg" alt="arrow"></span></div>
+                                <div class="panel"> 
+                                    <p class="panel-description">Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p>
+                                    <p class="panel-price"> <span class="bucks">$</span><span>25</span>/ per hour</p>
+                                    <a class="panel-button" href="#contacts"> Order</a>
+                                </div>
+                            </div>
+                            
+                            <div class="prices-selection-item">
+                                <div class="prices-selection-list">Pro Care <span><img src="assets/arrow.svg" alt="arrow"></span></div>
+                                <div class="panel"> 
+                                    <p class="panel-description">Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p>
+                                    <p class="panel-price"> <span class="bucks">$</span><span>35</span> &nbsp / per hour</p>
+                                    <a class="panel-button" href="#contacts"> Order</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="prices-call-us">
                         <h2 class="section-title">Our best <span>gardeners</span> are <br> ready to help you</h2>
@@ -159,17 +182,56 @@
         </div>
 
             <div class="container">
-                <section class="contacts" id="contacts">
+                <div class="contacts" id="contacts">
                     <div class="contact-woman"> </div>
                     <h2 class="section-title">Contact us</h2>
-                    <div class="contacts-selection" title="Аккордеон не нужен на 0 стейдже"> <!-- Аккордеон не нужен на 0 стейдже, поэтому пока что так-->
-                        <div class="contacts-selection-option">
-                            <p class="option-disabled"> City </p>
+
+                    <div class="contacts-window-selection">
+
+                        <div class="contacts-selection">
+                            <div class="contacts-selection-header">
+                                <span class="contacts-selection-current">
+                                    City
+                                </span>
+                                <div class="contacts-arrow">
+                                    <img src="assets/arrow.png" alt="arrow">
+                                </div>
+                            </div>
+                    
+                            <div class="contacts-selection-body">
+                                <!-- <div class="contacts-selection-item"> Canandaigua, NY</div>
+                                <div class="contacts-selection-item"> New York City</div>
+                                <div class="contacts-selection-item"> Yonkers, NY</div>
+                                <div class="contacts-selection-item"> Sherrill, NY</div> -->
+                            </div>
                         </div>
-                        <div class="contacts-arrow">
-                            <img src="assets/arrow.png" alt="arrow">
+
+                        <div class="contacts-city-card">
+                            <div class="contacts-data">
+                                <div class="contacts-data-name">
+                                    <span>City:</span>
+                                    <span>Phone:</span>
+                                    <span>Office adress:</span>
+                                </div>
+
+                                <div class="contacts-data-value">
+                                    <span class="city">City:</span>
+                                    <span class="phone"> Phone:</span>
+                                    <span class="office"> Office:</span>
+                                </div>
+
+                            </div>
+
+                            <div class="contacts-city-card-button-container">
+                                <a class="contacts-city-card-button">Call us</a>
+                            </div>
                         </div>
+
+
                     </div>
+
+                    
+
                 </section>
             </div>
         

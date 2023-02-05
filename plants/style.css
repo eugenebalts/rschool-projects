@@ -289,6 +289,7 @@ main {
         text-align: center;
         border: 1px solid #E3E1D5;
         border-radius: 20px;
+
         transition: all 0.2s linear;
     }
 
@@ -339,37 +340,98 @@ main {
 
     .prices-selection {
         margin-top: 60px;
-        padding: 34px 41px;
+        padding: 34px 41px 9px;
         list-style: none;
         background: white;;
         border: 1px solid #E3E1D5;
         border-radius: 20px;
     }
 
+    .prices-selection-item {
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        padding: 16px 40px;
+        width: 250px;
+        margin-bottom: 32px;
+        font-size: 20px;
+        background: #EDF2EC;
+        border-radius: 20px;
+        transition: all 0.2s linear;
+        user-select: none;
+    }
+
+
     .prices-selection-list {
         display: flex;
         justify-content: space-between;
         align-items: center;
         box-sizing: border-box;
-        min-width: 250px;
-        max-height: 50px;
-        margin-bottom: 32px;
-        padding: 16px 40px;
+        /* padding: 16px 40px; */
         font-family: 'Inter';
         font-size: 20px;
         font-weight: 700;
-        background: #EDF2EC;
-        border-radius: 20px;
-        transition: all 0.2s linear;
     }
+
+    .prices-selection-item.show .panel {
+        display: block;
+    }
+
+    .prices-selection-item.show img{
+        transform: rotate(180deg);
+    }
+
+    .prices-selection-item.show  {
+        background-color: #D6E7D2;
+    }
+
+
+
+    .panel {
+        display:none;
+        margin: 6px 0 0;
+        border-top: 0.2px solid #AEA1A1;
+    }
+
+    .panel-description {
+        margin: 6px 0;
+        line-height: 10px;
+        color: #717171;
+        font-size: 10px;
+    }
+
+    .panel-price {
+        margin: 8px 0;
+        font-size: 12px;
+    }
+
+    .panel-price span {
+        font-size: 15.5px;
+        font-weight: 700;
+        color: #E06733;
+    }
+
+    .panel-price .bucks {
+        font-size: 12px;
+    }
+
+    .panel-button {
+        padding: 6px 23px;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 700;
+        background-color: #FFFFFF;
+        border-radius: 10px;
+        color: #717171;
+    }
+
 
     .prices-selection-list:last-child {
         margin: 0;
     }
 
-    .prices-selection-list:hover {
-        background-color: #E06733;
-        color:white;
+    .prices-selection-item:hover {
+        background-color: #D6E7D2;
         cursor: pointer;
     }
 
@@ -437,36 +499,154 @@ main {
         height: 497px;
     }
 
-    .contacts-selection {
+
+    .contacts-window-selection {
         position: relative;
         top: 95px;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px 20px;
+        flex-direction: column;
+        gap: 47px;
+    }
+
+    .contacts-selection {
+        display: flex;
+        flex-direction: column;
         box-sizing: border-box;
-        height: 50px;
         width: 450px;
+        height: 50px;
+        letter-spacing: 1px;
         color: #717171;
+        font-size: 20px;
+        font-family: 'Inter';
         background: #D6E7D2;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        border-radius: 0px;
-        cursor: pointer;
+        box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+        user-select: none;
 
     }
 
-    .contacts-selection-option {
-        display: inline;
-        font-size: 21px;
-        line-height: 40px;
+    .contacts-selection-header {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 35px 15px 20px;
+        cursor: pointer;
     }
 
     .contacts-arrow {
-        position: relative; /* Не получилось сделать ровно без позиционирования */
-        top: 3px;
-        padding-right: 15px;
+        padding: 3px 0 0;
+
     }
 
+    .contacts-selection-body {
+        display: none;
+        box-sizing: border-box;
+        position: absolute;
+        top: 50px;
+        padding: 34px 48px 15px 20px ;
+        width: 100%;
+        font-size: 15.5px;
+        color: #499A18;
+        background: #DCE9D9;
+    }
+
+    .contacts-selection-item {
+        padding: 5px 6px;
+        margin-bottom: 17px;
+        border-bottom: 1px solid #D9D9D9;
+        cursor: pointer;
+        transition: all .2s ease-in-out;
+    }
+
+    .contacts-selection-item:hover {
+        color: #717171;
+        border-bottom: 1px solid #717171;
+    }
+
+
+    .contacts-selection.drop-menu {
+        background-color: #C1E698;
+    }
+
+    .contacts-selection.drop-menu .contacts-arrow{
+        transform: rotate(180deg)
+    }
+
+    .contacts-selection.drop-menu .contacts-selection-body{
+        display: block;
+    }
+
+    .contacts-city-card {
+        display: none;
+        flex-direction: column;
+        box-sizing: border-box;
+        padding: 25px 33px;
+        width: 448px;
+        height: 214px;
+        float: left;
+        font-size: 16px;
+        border: 1px solid black;
+        border-radius: 20px;
+        letter-spacing: 1px;;
+    }
+
+    .contacts-data {
+        display: flex;
+    }
+
+    .contacts-data-name {
+        display: flex;
+        flex-direction: column;
+        margin-right: 12px;
+    }
+
+    .contacts-data-name span {
+        margin-bottom:  20px;
+    }
+
+    .contacts-data-name {
+        margin-bottom:  9px;
+    }
+
+    .contacts-data-value {
+        display: flex;
+        flex-direction: column;
+        color: #717171;
+    }
+
+    .contacts-data-value span {
+        margin-bottom: 20px;
+    }
+
+    .contacts-city-card-button-container {
+        display: flex;
+        justify-content: center;
+    }
+
+
+    .contacts-city-card-button {
+        text-align: center;
+        padding: 6px 45px;
+        font-size: 10px;
+        font-weight: 700;
+        font-family: 'Inika';
+        background: #EDF2EC;
+        border: 1px solid #E06733;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .contacts-city-card-button:hover {
+        background: #E06733;
+        color: white;
+    }
+
+    .contacts-city-card.open {
+        display: block;
+    }
+
+    .contacts-city-card-button {
+        text-decoration: none;
+        color: #717171;
+    }
 
 
 /* FOOTER */
@@ -731,10 +911,9 @@ main {
 
     }
 
-    .contacts-selection {
+    .contacts-window-selection {
         order: 2;
         margin-top: 100px;
-        position: static;
     }
 
 
