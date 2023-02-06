@@ -321,7 +321,7 @@ main {
     .service-item.gardens.blur {
         filter: blur(3px);
     }
-    .service-item.gardens.blur {
+    .service-item.lawn.blur {
         filter: blur(3px);
     }
 
