@@ -133,9 +133,65 @@ function selectToggle() {
 }
 
 
+// BLUR CARDS
+
+let serviceItem = document.querySelectorAll('.service-item');
+let gardensButton = document.querySelector('.service-button.gardens');
+let lawnButton = document.querySelector('.service-button.lawn');
+let plantingButton = document.querySelector('.service-button.planting');
+let allButtons = document.querySelectorAll('.service-button');
+console.log(allButtons)
+
+
+allButtons.forEach(button => {
+    button.addEventListener('click', function(event) {
+        alert('с этим заданием я не справился, но очень хотел бы разобраться. Если есть желание помочь, наведи в комментариях на верный путь пожалуйста, буду ооочень благодарен!) Знаю, что скорее через массивы надо делать, но никак не могу сообразить')
+        event.target.classList.toggle('active')
+        serviceItem.forEach(item => {
+            //ОДИНОЧНОЕ НАЖАТИЕ
+            if (event.target.classList.contains('gardens')) {
+                if (!item.classList.contains('gardens')) {
+                    item.classList.toggle('blur')
+                }
+            }
+
+            if (event.target.classList.contains('lawn')) {
+                if (!item.classList.contains('lawn')) {
+                    item.classList.toggle('blur')
+                }
+            }
+
+            if (event.target.classList.contains('planting')) {
+                if (!item.classList.contains('planting')) {
+                    item.classList.toggle('blur')
+                }
+            }
+
+            // 2 КНОПКИ
+
+            // if (event.target.classList.contains('gardens')) {
+            //     if (button.classList.contains('active') && item.classList.contains('lawn')) {
+            //         item.classList.toggle('blur')
+            //     } else if (event.target.classList.contains('gardens')) {
+            //         if (!item.classList.contains('gardens')) {
+            //             item.classList.toggle('blur')
+            //         }
+            //     }
+            // } 
+
+
+        })
+
+
+    })
+
+
+})
+
+
 // 
 
-alert('Привет, дай мне пожалуйста один день на доработку, буду очень благодарен ♥♥♥')
+// alert('Привет, дай мне пожалуйста один день на доработку, буду очень благодарен ♥♥♥')
 
 
 
