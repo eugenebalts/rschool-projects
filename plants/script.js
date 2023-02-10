@@ -133,9 +133,39 @@ function selectToggle() {
 }
 
 
+// BLUR CARDS
+
+// let serviceItem = document.querySelectorAll('.service-item');
+// let gardensButton = document.querySelector('.service-button.gardens');
+// let lawnButton = document.querySelector('.service-button.lawn');
+// let plantingButton = document.querySelector('.service-button.planting');
+// let allButtons = document.querySelectorAll('.service-button');
+// let turnedGardens = this.classList.contains('active');
+// let turnedLawn = lawnButton.classList.contains('.active');
+// let turnedPlanting = plantingButton.classList.contains('.active');
+// console.log(allButtons)
+
+
+// allButtons.forEach(button => {
+//     button.addEventListener('click', function(event) {
+//         let turnedGardens = this.classList.contains('active');
+//         event.target.classList.toggle('active');
+
+//         serviceItem.forEach(item => {
+
+//             })
+//         console.log(turnedGardens)
+//     })
+
+
+
+// })
+
+
+
 // 
 
-alert('Привет, дай мне пожалуйста один день на доработку, буду очень благодарен ♥♥♥')
+// alert('Привет, дай мне пожалуйста один день на доработку, буду очень благодарен ♥♥♥')
 
 
 

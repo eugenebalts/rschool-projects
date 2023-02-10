@@ -289,7 +289,6 @@ main {
         text-align: center;
         border: 1px solid #E3E1D5;
         border-radius: 20px;
-
         transition: all 0.2s linear;
     }
 
@@ -317,6 +316,23 @@ main {
     .service-item:hover {
         transform: scale(1.05);
         cursor: pointer;
+    }
+
+    .service-item.gardens.blur {
+        filter: blur(3px);
+    }
+    .service-item.lawn.blur {
+        filter: blur(3px);
+    }
+
+    .service-item.planting.blur {
+        filter: blur(3px);
+    }
+
+
+    .service-button.active {
+        color: white;
+        background-color: #E06733;
     }
 
 
@@ -904,17 +920,22 @@ main {
 
     .contact-woman {
         order: 3;
-        margin: 250px 0 0 19px;
+        margin: 350px 0 0 19px;
         height: 248.5px;
         width: 200px;
         text-align: center;
+    }
 
+
+    .contacts-city-card.open {
+        margin-top: -15px;
     }
 
     .contacts-window-selection {
         order: 2;
-        margin-top: 100px;
     }
+
+
 
 
     /* FOOTER */
@@ -1112,11 +1133,15 @@ main {
         padding: 29px 22px;
     }
 
-    .prices-selection-list {
-        min-width: 180px;
+    .prices-selection-item {
+        max-width: 180px;
         margin-bottom: 13.92px;
         padding: 15.91px 30px;
         font-size: 15px;
+    }
+    
+    .prices-selection-item.last {
+        margin-bottom: 0;
     }
 
     .prices-selection-list img {
