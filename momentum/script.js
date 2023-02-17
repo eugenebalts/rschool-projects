@@ -7,11 +7,19 @@ let currentTime = actualDate.toLocaleTimeString(); // ONLY TIME
 const options = {date: 'long',month: 'long', day: 'numeric'};
 let currentDate = actualDate.toLocaleDateString('en-US', options);
 const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-const timeOfDay = ['Morning', 'Afternoon', 'Evening', 'Night'];
+let timeOfDay;
 
 const greeting = document.querySelector('.greeting');
 
 const name = document.querySelector('.name');
+const body = document.querySelector('body');
+
+let randomNum;
+let bgNum;
+
+const slideNext = document.querySelector('.slide-next');
+const slidePrev = document.querySelector('.slide-prev');
+
 
 
 
@@ -43,14 +51,16 @@ showTime();
 function getTimeOfDay() {
     let currentHour = actualDate.getHours();
     if (currentHour >= 00 && currentHour < 12) {
-        greeting.textContent = `Good ${timeOfDay[0]}`
+        timeOfDay = 'Morning';
     } else if (currentHour >= 12 && currentHour < 17) {
-        greeting.textContent = `Good ${timeOfDay[1]}`
+        timeOfDay = 'Afternoon'
     } else if (currentHour >= 17 && currentHour < 20) {
-        greeting.textContent = `Good ${timeOfDay[2]},`
-    } else greeting.textContent = `Good ${timeOfDay[3]},`
+        timeOfDay = 'Evening'
+    } else timeOfDay = 'Night'
+    greeting.textContent = `Good ${timeOfDay}`
 }
 getTimeOfDay();
+
 
 
 //REMEMBER NAME FROM INPUT
@@ -69,6 +79,57 @@ function getLocalStorage() {
 }
 
 window.addEventListener('load', getLocalStorage);
+
+
+
+// SLIDER
+
+
+
+function setBg() {
+    function getRandomNum() {
+        randomNum = Math.round(Math.random() * (20 - 1) + 1);
+        bgNum = randomNum.toString().padStart(2, '0');
+    }
+    getRandomNum();
+
+    backgroundLink = `https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/${timeOfDay.toLowerCase()}/${bgNum}.jpg`
+    body.style.backgroundImage = `url(${backgroundLink})`
+}
+setBg()
+console.log(bgNum)
+
+
+slideNext.addEventListener('click', getSlideNext);
+slidePrev.addEventListener('click', getSlidePrev);
+
+function getSlideNext() {
+    let result = parseInt(bgNum) + 1;
+    if (result > 20) {
+        result = 1;
+    }
+    bgNum = result.toString().padStart(2, '0');
+    let img = new Image();
+    img.src = `https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/${timeOfDay.toLowerCase()}/${bgNum}.jpg`;
+    img.onload = () => {
+        body.style.backgroundImage = `url(${img.src})`
+    }
+
+}
+
+function getSlidePrev() {
+    let result = parseInt(bgNum) - 1;
+    if (result < 1) {
+        result = 20;
+    }
+    bgNum = result.toString().padStart(2, '0');
+
+    let img = new Image();
+    img.src = `https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/${timeOfDay.toLowerCase()}/${bgNum}.jpg`;
+    img.onload = () => {
+        body.style.backgroundImage = `url(${img.src})`
+    }
+}
 
 
 
