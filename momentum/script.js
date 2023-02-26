@@ -1,5 +1,3 @@
-// TIME & DATE
-
 const citation = [
     {
         'text': "If life were predictable it would cease to be life and be without flavor." ,
@@ -314,6 +312,7 @@ function pauseAudio() {
     player.classList.remove('playing')
     audio.pause();
     playerPlay.style.backgroundImage = ' url("assets/svg/play.svg")';
+    
 }
 
 playerPlay.addEventListener('click', () => {
@@ -332,8 +331,11 @@ function nextAudio() {
     }
     loadSong(songs[songIndex]);
     songName.textContent = songs[songIndex];
-
     playAudio();
+    songInPlaylist.forEach((song, index) => {
+        song.classList.remove('playing');
+    })
+    songInPlaylist[songIndex].classList.add('playing')
 }
 
 function prevAudio() {
@@ -344,6 +346,10 @@ function prevAudio() {
     loadSong(songs[songIndex]);
     songName.textContent = songs[songIndex];
     playAudio();
+    songInPlaylist.forEach((song, index) => {
+        song.classList.remove('playing');
+    })
+    songInPlaylist[songIndex].classList.add('playing')
 }
 
 playerNext.addEventListener('click', nextAudio);
@@ -366,14 +372,13 @@ playerPrev.addEventListener('click', prevAudio);
 // // // // ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-
         songInPlaylist.forEach((song, index) => {
             song.addEventListener('click', (e) => {
                 songName.textContent = e.target.textContent;
                 songInPlaylist.forEach(item => {
                     item.classList.remove('playing');
                 })
-                e.target.classList.add('playing')
+                e.target.classList.add('playing');
                 loadSong(songs[index])
                 playAudio()
             })
@@ -425,7 +430,9 @@ audio.addEventListener("loadeddata", () => {
     audioLength.textContent = getTimeCodeFromNum(
         audio.duration
     );
+    
     ;
+    
 
     audio.volume = .1;
     },  
@@ -443,48 +450,3 @@ audio.addEventListener("loadeddata", () => {
 //     console.log(url)
 // }
 // getLinkToImage()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
