@@ -237,7 +237,6 @@ function rememberCity() {
 }
 
 window.addEventListener('beforeunload', rememberCity);
-window.addEventListener('beforeunload', getWeather)
 
 function rememberCityLoad() {
     if (localStorage.getItem('name')) {
